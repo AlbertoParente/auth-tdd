@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require("express")
 
 class AppController {
     constuctor() {
@@ -17,4 +17,4 @@ class AppController {
     }
 }
 
-module.exports = new AppController().express
+module.exports = new AppController().express;
