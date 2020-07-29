@@ -5,12 +5,19 @@
   "repository": "https://github.com/AlbertoParente/auth-tdd.git",
   "author": "AlbertoParente <albertoparente20@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js --ignore __tests__",
+    "test": "jest"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "pg": "^8.3.0",
     "sequelize": "^4.42.0"
   },
   "devDependencies": {
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4",
     "sequelize-cli": "^6.2.0"
   }
 }
