@@ -1,10 +1,10 @@
 const express = require("express")
 
 class AppController {
-    constuctor() {
+    constructor() {
         this.express = express()
 
-        this.middleware()
+        this.middlewares()
         this.routes()
     }
 
