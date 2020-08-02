@@ -12,14 +12,14 @@ describe('Autetication', () => {
     const user = await User.create({
       name: 'Alberto',
       email: 'albertoparentefh@gmail.com',
-      password_hash: '123456789'
+      password: '123123'
     })
 
     const response = await request(app)
       .post('/sessions')
       .send({
         email: user.email,
-        password: '123456789'
+        password: '123123'
       })
 
     expect(response.status).toBe(200)
