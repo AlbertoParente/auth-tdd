@@ -13,6 +13,8 @@ describe('Autetication', () => {
       password: '123123'
     })
 
+    console.log(user)
+
     const response = await request(app)
       .post('/sessions')
       .send({
