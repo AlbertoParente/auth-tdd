@@ -1,7 +1,7 @@
 const request = require('supertest')
 const app = require('../../src/app')
-const { User } = require('../../src/app/models')
 const truncate = require('../utils/truncate')
+const factory = require('../factories')
 
 describe('Autetication', () => {
   beforeEach(async () => {
@@ -9,9 +9,7 @@ describe('Autetication', () => {
   })
 
   it('should auteticate with valid credentials', async() => {
-    const user = await User.create({
-      name: 'Alberto',
-      email: 'albertoparentefh@gmail.com',
+    const user = await factory.create('User', {
       password: '123123'
     })
 
@@ -26,9 +24,7 @@ describe('Autetication', () => {
   })
 
   it('should not authenticate with invalid credentials', async () => {
-    const user = await User.create({
-      name: 'Alberto',
-      email: 'albertoparentefh@gmail.com',
+    const user = await factory.create('User', {
       password: '123123'
     })
 
@@ -43,9 +39,7 @@ describe('Autetication', () => {
   })
 
   it('should return jwt token when authenticated', async () => {
-    const user = await User.create({
-      name: 'Alberto',
-      email: 'albertoparentefh@gmail.com',
+    const user = await factory.create('User', {
       password: '123123'
     })
 
