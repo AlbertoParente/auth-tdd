@@ -13,7 +13,7 @@ describe('Autetication', () => {
       password: '123123'
     })
 
-    console.log(user)
+    // console.log(user)
 
     const response = await request(app)
       .post('/sessions')
@@ -61,9 +61,17 @@ describe('Autetication', () => {
     })
 
     const response = await request(app)
-      .post('/dashboard')
+      .get('/dashboard')
       .set('Authorization', `Bearer ${user.generateToken()}`)
 
     expect(response.status).toBe(200)
   })
+
+  it('should not be able to access private routes when not authenticated', async() => {
+    const response = await request(app)
+      .get('/dashboard')
+
+    expect(response.status).toBe(401)
+  })
+
 })
