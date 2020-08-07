@@ -73,5 +73,4 @@ describe('Autetication', () => {
 
     expect(response.status).toBe(401)
   })
-
 })
