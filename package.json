@@ -17,13 +17,13 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "factory-girl": "^5.0.4",
-    "faker": "^4.1.0",
+    "faker": "^5.1.0",
     "jsonwebtoken": "^8.5.1",
-    "pg": "^8.3.0",
-    "sequelize": "^4.42.0"
+    "pg": "^8.3.3",
+    "sequelize": "^6.3.5"
   },
   "devDependencies": {
-    "jest": "^26.1.0",
+    "jest": "^26.4.2",
     "nodemon": "^2.0.4",
     "sequelize-cli": "^6.2.0",
     "sqlite3": "^5.0.0",
